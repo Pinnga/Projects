@@ -1,18 +1,28 @@
-/**
- * REPLACE THIS COMMENT WITH YOUR OWN JAVA DOC COMMENT
- * THAT DESCRIBES THE PURPOSE OF YOUR CLASS
- * 
- * You may change this file as much as you like,
- *  
- * HOWEVER:
- *  - You may not move the file to a different package
- * 	- You may not change the name of the file or the class
- */
 package edu.wm.cs.cs301.connectn;
 
+import edu.wm.cs.cs301.connectn.View.*;
+
+/**
+ * The main class for the ConnectN game.
+ */
 public class Main {
 
-	public static void main(String[] args) {
-		
-	}
+    /**
+     * The main method that starts the game.
+     * It displays the instructions and initializes the game frame.
+     *
+     * @param args Command-line arguments (not used)
+     */
+    public static void main(String[] args) {
+        showInstructions();
+        new ConnectNFrame();
+    }
+
+    /**
+     * Displays the instructions dialog.
+     */
+    public static void showInstructions() {
+        InstructionsDialog instructionsDialog = new InstructionsDialog(null);
+        instructionsDialog.setVisible(true);
+    }
 }
